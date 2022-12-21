@@ -1,0 +1,12 @@
+{% extends 'elementos/estructura.html' %}
+{% block contenido %}
+    {% load crispy_forms_tags %}
+    <div class="container rounded border p-5 bg-pink text-white">
+        <h1>REGISTRAR</h1><hr>
+        <form class="" method="post">
+            {% csrf_token %}
+            {{ form | crispy }}
+            <input type="submit" value="REGISTRAR" class="btn-pink form-control">
+        </form>
+    </div><br><br><br><br>
+{% endblock %}
